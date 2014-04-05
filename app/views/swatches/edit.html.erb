@@ -1,0 +1,9 @@
+<%= form_for @swatch, :url => swatch_path(@swatch.id), :method => 'put' do |f| %>
+  Name: <%= f.text_field :name %><br />
+  Color : <%= f.text_field :color, :type => 'color' %><br />
+  <br />
+  <%= f.hidden_field :id %>
+  <%= f.submit 'Save' %>
+<% end %>
+<hr>
+<%= link_to 'Home', swatches_path %>

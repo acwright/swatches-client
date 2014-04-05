@@ -1,0 +1,12 @@
+<%= link_to 'New Swatch', new_swatch_path %>
+<ul>
+  <% @swatches.each do |swatch| %>
+    <li>
+      <%= swatch.name %><br />
+      <em><%= swatch.color %></em>
+      <%= link_to 'Edit', edit_swatch_path(swatch.id) %>
+      |
+      <%= link_to 'Delete', swatch_path(swatch.id), :method => 'delete' %>
+    </li>
+  <% end %>
+</ul>
